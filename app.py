@@ -44,7 +44,7 @@ if st.button("Analyse enquiry", type="primary", use_container_width=True):
             client = genai.Client(api_key=api_key)
             with st.spinner("Analysing enquiry…"):
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.8-flash",
                     contents=f"Analyse this buyer enquiry:\n\n{enquiry}",
                     config=types.GenerateContentConfig(
                         system_instruction=SYSTEM_INSTRUCTIONS,
